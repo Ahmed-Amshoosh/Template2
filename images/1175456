@@ -1,0 +1,1431 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" prefix="og: https://ogp.me/ns#">
+<head>
+<meta property="fb:pages" content="126880864009265" />
+
+<script async src="https://cdn.onthe.io/io.js/agR6kGbYiN5g"></script>
+<meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"754f84eaad",applicationID:"1443615376"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+<link rel="canonical" href="https://www.sayidaty.net/node/1175456" />
+<link rel="shortlink" href="https://www.sayidaty.net/node/1175456" />
+<meta name="description" content="نشرت أخيرا وكالة الفضاء الأميركية «ناسا» فيديو لأفضل 20 صورة للأرض في العام 2020، التقطها رواد الفضاء من محطة الفضاء الدولية...وتضمن الفيديو صوراً مذهلة، ومناظر طبيعية رائعة، فضلاً عن مدن مترامية الأطراف، بينما سلطت صور أخرى الضوء على بعض التحديات التي تواجه كوكبنا كحرائق الغابات، ومن بين الصور المبهرة البحيرات العظمى في أميركا الشمالية، والقمر فوق المحيط الأطلسي، و" />
+<meta name="abstract" content="نشرت أخيرا وكالة الفضاء الأميركية «ناسا» فيديو لأفضل 20 صورة للأرض في العام 2020، التقطها رواد الفضاء من محطة الفضاء الدولية...وتضمن الفيديو صوراً مذهلة، ومناظر طبيعية رائعة، فضلاً عن مدن مترامية الأطراف، بينما سلطت صور أخرى الضوء على بعض التحديات التي تواجه كوكبنا كحرائق الغابات، ومن بين الصور المبهرة البحيرات العظمى في أميركا الشمالية، والقمر فوق المحيط الأطلسي، و" />
+<meta name="keywords" content="شروق الشمس, رواد الفضاء, الجاذبية الأرضية, القمر, الطاقة الكهربائية" />
+<meta property="fb:app_id" content="1702268296755116" />
+<link rel="alternate" hreflang="ar" href="https://www.sayidaty.net/node/1175456/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%AA%D8%AD%D9%82%D9%8A%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/%D8%A3%D8%AC%D9%85%D9%84-%D8%B5%D9%88%D8%B1-%D8%A7%D9%84%D8%A3%D8%B1%D8%B6-%D9%85%D9%86-%D8%A7%D9%84%D9%81%D8%B6%D8%A7%D8%A1" />
+<meta property="og:site_name" content="موقع سيدتي" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.sayidaty.net/node/1175456/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%AA%D8%AD%D9%82%D9%8A%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/%D8%A3%D8%AC%D9%85%D9%84-%D8%B5%D9%88%D8%B1-%D8%A7%D9%84%D8%A3%D8%B1%D8%B6-%D9%85%D9%86-%D8%A7%D9%84%D9%81%D8%B6%D8%A7%D8%A1" />
+<meta property="og:title" content="أجمل صور الأرض من الفضاء" />
+<meta property="og:description" content="نشرت أخيرا وكالة الفضاء الأميركية «ناسا» فيديو لأفضل 20 صورة للأرض في العام 2020، التقطها رواد الفضاء من محطة الفضاء الدولية...وتضمن الفيديو صوراً مذهلة، ومناظر طبيعية رائعة، فضلاً عن مدن مترامية الأطراف، بينما سلطت صور أخرى الضوء على بعض التحديات التي تواجه كوكبنا كحرائق الغابات، ومن بين الصور المبهرة البحيرات العظمى في أميركا الشمالية، والقمر فوق المحيط الأطلسي، و" />
+<meta property="og:image" content="https://www.sayidaty.net/sites/default/files/styles/600x380/public/2021/01/20/7310556-1124646722.jpg?itok=vCtOryph" />
+<meta property="og:image:url" content="https://www.sayidaty.net/sites/default/files/styles/600x380/public/2021/01/20/7310556-1124646722.jpg?itok=vCtOryph" />
+<meta property="og:image:secure_url" content="https://www.sayidaty.net/sites/default/files/styles/600x380/public/2021/01/20/7310556-1124646722.jpg?itok=vCtOryph" />
+<meta property="article:section" content="أخبار" />
+<meta property="article:tag" content="شروق الشمس" />
+<meta property="article:tag" content="رواد الفضاء" />
+<meta property="article:tag" content="الجاذبية الأرضية" />
+<meta property="article:tag" content="القمر" />
+<meta property="article:tag" content="الطاقة الكهربائية" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="نشرت أخيرا وكالة الفضاء الأميركية «ناسا» فيديو لأفضل 20 صورة للأرض في العام 2020، التقطها رواد الفضاء من محطة الفضاء الدولية...وتضمن الفيديو صوراً مذهلة، ومناظر طبيعية رائعة، فضلاً عن مدن مترامية الأطراف، بينما سلطت صور أخرى الضوء على بعض التحديات التي تواجه كوكبنا كحرائق الغابات، ومن بين الصور المبهرة البحيرات العظمى في أميركا الشمالية، والقمر فوق المحيط الأطلسي، و" />
+<meta name="twitter:title" content="أجمل صور الأرض من الفضاء" />
+<meta name="twitter:url" content="https://www.sayidaty.net/node/1175456" />
+<meta name="twitter:image" content="https://www.sayidaty.net/sites/default/files/styles/600x380/public/2021/01/20/7310556-1124646722.jpg?itok=vCtOryph" />
+<meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "NewsArticle",
+            "headline": "أجمل صور الأرض من الفضاء",
+            "description": "\u003Cp\u003Eنشرت أخيرا وكالة الفضاء الأميركية «ناسا» فيديو لأفضل 20 صورة للأرض في العام 2020، التقطها رواد الفضاء من محطة الفضاء الدولية...وتضمن الفيديو صوراً مذهلة، ومناظر طبيعية رائعة، فضلاً عن مدن مترامية الأطراف، بينما سلطت صور أخرى الضوء على بعض التحديات التي تواجه كوكبنا كحرائق الغابات، ومن بين الصور المبهرة البحيرات العظمى في أميركا الشمالية، والقمر فوق المحيط الأطلسي، و\u003Ca href=\u0022https://www.sayidaty.net/node/1175006/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%AA%D8%AD%D9%82%D9%8A%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/%D8%A3%D8%BA%D8%B1%D8%A8-%D8%A7%D9%84%D8\u0026lt;/body\u0026gt;\u0026lt;/html\u0026gt;\u0022\u003E\u003C/a\u003E\u003C/p\u003E",
+            "image": {
+                "@type": "ImageObject",
+                "url": "https://www.sayidaty.net/sites/default/files/styles/600x380/public/2021/01/20/7310556-1124646722.jpg?itok=vCtOryph"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "مي مصطفى"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "مجلة سيدتي",
+                "url": "https://www.sayidaty.net/",
+                "sameAs": [
+                    "https://www.instagram.com/sayidatynet/",
+                    "https://twitter.com/sayidatynet"
+                ],
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://www.sayidaty.net/themes/custom/sayidaty/assets/img/logo/logo-new3.png"
+                }
+            }
+        }
+    ]
+}</script>
+<link rel="icon" href="/sites/default/files/favicon2_1.png" type="image/png" />
+<title>أجمل صور الأرض من الفضاء | مجلة سيدتي</title>
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_DfIk0kDE_97QqZBJr5TF4iiP6Rt7nG3gWSu-Jh5AKCY.css" />
+<link rel="stylesheet" media="all" href="/sites/default/files/css/css_LI8QQ6L6yBJLu87CBNC40DbwXLTOWnnlhSA8p2qEsj0.css" />
+<meta name="B-verify" content="8c93f16dd20b2dc893c4dff1c7527918b1075dce" />
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700;800;900&display=swap" rel="stylesheet">
+<script type="text/javascript">
+
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+                                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+                            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+
+
+                    ga('create', 'UA-8935925-4', {'name': 'sayidaty'});
+                    ga('sayidaty.send', 'pageview');
+
+                    function trackClick(text,link,title) {
+
+                        ga('sayidaty.send', 'event', 'button', 'click', {'page': link});
+
+                    };
+
+
+
+                    function trackClickView(href) {
+                        ga('sayidaty.send', 'pageview', href);
+                        //googletag.pubads().refresh();
+                    }
+
+                    function refreshEM(href) {
+                        var date = new Date();
+                        var measure = document.createElement('script');
+                        measure.type = 'text/javascript';
+                        measure.async = true;
+                        measure.src = ((location.protocol.indexOf('https')>-1?'https://me-ssl':'http://me-cdn')) +unescape('.effectivemeasure.net/em.js?t='+date.getTime());
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(measure, s);
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.removeChild(s);
+                        _em.trackAjaxPageview(href);
+                    }
+
+
+
+                </script>
+<script>(function() {
+                        var _fbq = window._fbq || (window._fbq = []);
+                        if (!_fbq.loaded) {
+                            var fbds = document.createElement('script');
+                            fbds.async = true;
+                            fbds.src = '//connect.facebook.net/en_US/fbds.js';
+                            var s = document.getElementsByTagName('script')[0];
+                            s.parentNode.insertBefore(fbds, s);
+                            _fbq.loaded = true;
+                        }
+                        _fbq.push(['addPixelId', '600367750058286']);
+                    })();
+                    window._fbq = window._fbq || [];
+                    window._fbq.push(['track', 'PixelInitialized', {}]);
+                </script>
+<noscript><img height='1' width='1' border='0' alt='' style='display:none' src='https://www.facebook.com/tr?id=600367750058286&amp;ev=NoScript' /></noscript>
+
+<script type='text/javascript'>
+                    var fb_param = {};
+                    fb_param.pixel_id = '6013627249590';
+                    fb_param.value = '0.00';
+                    fb_param.currency = 'USD';
+                    (function(){
+                        var fpw = document.createElement('script');
+                        fpw.async = true;
+                        fpw.src = '//connect.facebook.net/en_US/fp.js';
+                        var ref = document.getElementsByTagName('script')[0];
+                        ref.parentNode.insertBefore(fpw, ref);
+                    })();
+                </script>
+<noscript><img height='1' width='1' alt='' style='display:none' src='https://www.facebook.com/offsite_event.php?id=6013627249590&amp;value=0&amp;currency=USD' /></noscript>
+
+<script type='text/javascript'>
+                    (function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
+                    {a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
+                        a.queue=[];var s='script';r=t.createElement(s);r.async=!0;
+                        r.src=n;var u=t.getElementsByTagName(s)[0];
+                        u.parentNode.insertBefore(r,u);})(window,document,
+                            'https://sc-static.net/scevent.min.js');
+
+                    snaptr('init', '70e709cf-1fab-4f8a-a770-9f263106e887', {
+                        'user_email': '__INSERT_USER_EMAIL__'
+                    });
+
+                    snaptr('track', 'PAGE_VIEW');
+
+                </script>
+
+<script type='text/javascript'>
+                    !function(){var t=document.createElement("script");
+                        t.setAttribute("type","text/javascript"),
+                                t.setAttribute("src","https://cdn.jubna.com/adscripts/jb_cvalidatorv1.js"),
+                                document.getElementsByTagName("head")[0].appendChild(t)}();
+                </script>
+<style type="text/css">
+                    #st_gdpr_iframe{
+                        right:-5000px;
+                        left: auto!important;
+                    }
+                    select {
+                        padding-left: 1.5rem !important;
+
+                    }
+                </style>
+
+<script type="text/javascript">
+                    (function(t,r,a,c,k,n,o,w){t['em_ns']=k;w=1*new Date();t[k]=t[k]||function(){
+                                (t[k].q=t[k].q||[]).push(arguments)},t[k].t=w;n=r.createElement(a);n.async=1;
+                        n.src=c+'/tag'+(t.addEventListener&&'.'||'_.')+'js?'+parseInt(w/1e9, 10);
+                        o=r.getElementsByTagName(a)[0];o.parentNode.insertBefore(n,o)
+                    })(window,document,'script','https://t.effectivemeasure.net','_em');
+                </script>
+<noscript>
+                    <img src="https://collector.effectivemeasure.net/noscript" alt="" style="position:absolute; left:-5px;" />
+                </noscript>
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                    })(window,document,'script','dataLayer','GTM-KZQZ3R');</script>
+
+</head>
+<body class="index default  path-node page-node-type-article">
+<img src="//mena-gmtdmp.mookie1.com/t/v2/learn?tagid=V2_605775&src.rand=[timestamp]" style="display:none;" />
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KZQZ3R"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id='impactify-screen-static'></div>
+<script>
+window.impactifyTag = window.impactifyTag || [];
+impactifyTag.push({
+"appId": "sayidaty.net",
+"format": "screen",
+"style": "static",
+"onNoAd": function(){}
+});
+(function(d, s, id) {
+var js, ijs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = 'https://ad.impactify.io/static/ad/tag.js';
+ijs.parentNode.insertBefore(js, ijs);
+}(document, 'script', 'impactify-sdk'));
+</script>
+<div id="main-wrap">
+<div canvas="container">
+<div class="container">
+<style>
+    .nav-holder ul li a{
+        padding: .7rem 0.7rem;
+    }
+    .ad-holder{
+        padding:0;
+    }
+</style>
+<header id="main-header">
+<div class="main-header-before show-for-large">
+<div class="grid-container">
+<div class="grid-x align-middle position-relative">
+<div class="cell shrink medium-2 large-3 xlarge-3">
+<div>
+<button class="toggle-nav-panel" type="button" aria-label="Menu" aria-controls="navigation">
+<i class="icomoon-icon icon-menu"></i>
+</button>
+</div>
+</div>
+<div class="cell auto xlarge-6">
+<div class="top-logo text-center">
+<a href="/"><img src="/themes/custom/sayidaty/assets/img/logo/logo-new3.png?sssss" alt="Logo"></a>
+</div>
+</div>
+<div class="cell shrink medium-2 large-3 xlarge-3">
+<div class="icons-holder">
+<div class="show-for-medium">
+<i class="icomoon-icon icon-follow"></i>
+<div class="follow-on-social-media">
+<a href="https://www.facebook.com/sayidatynetpage"><i class="icomoon-icon icon-facebook"></i></a>
+<a href="https://twitter.com/sayidatynet"><i class="icomoon-icon icon-twitter"></i></a>
+ <a href="https://www.instagram.com/sayidatynet"><i class="icomoon-icon icon-instagram"></i></a>
+<a href="https://www.tiktok.com/@sayidaty"><i class="icomoon-icon icon-tiktok"></i></a>
+<a href="https://www.snapchat.com/discover/Sayidaty/3820158893"><i class="icomoon-icon icon-snapchat-ghost"></i></a>
+<a href="https://www.youtube.com/channel/UCOSMJgnSejyeuyPAY4T6wiQ?sub_confirmation=1"><i class="icomoon-icon icon-youtube"></i></a>
+<a target="_blank" href=" https://news.google.com/publications/CAAqJggKIiBDQklTRWdnTWFnNEtESE5oZVdsa1lYUjVMbTVsZENnQVAB?oc=3&ceid=SA:ar&hl=ar&gl=SA"><i class="icomoon-icon icon-newspaper"></i></a>
+<a href="https://nabd.com/sayidaty"><img src="/themes/custom/sayidaty/assets/img/icons/nabd2.png"> </a>
+</div>
+</div>
+<a href="#" class="search-trigger"><i class="icomoon-icon icon-search"></i></a>
+</div>
+<div class="search-overlay">
+<div class="grid-container">
+<div class="search-overlay-close-button text-left">
+<a href="#"><i class="icomoon-icon icon-close"></i></a>
+</div>
+<div class="search-overlay-inner">
+<div class="search-area">
+<form class="views-exposed-form" data-drupal-selector="views-exposed-form-solrcontent-page-1" action="/search/site" method="get" id="views-exposed-form-solrcontent-page-1" accept-charset="UTF-8" data-drupal-form-fields="edit-search-api-fulltext">
+<input placeholder="أدخل كلمة البحث…" name="search_api_fulltext" title="أدخل كلمة البحث" data-drupal-selector="edit-keys" type="text" id="edit-keys" name="keys" value="" size="15" maxlength="128" autofocus>
+<input data-drupal-selector="edit-submit-solrcontent" type="submit" data-drupal-selector="edit-submit" id="edit-submit" value="&#xe932;">
+</form>
+</div>
+<p>اكتب الكلمات الرئيسية فى البحث</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="main-header-inner" id="sticky-header">
+<div class="grid-container">
+<div class="grid-x grid-padding-x align-justify align-middle align-center">
+<div class="cell shrink medium-2 large-shrink xlarge-2 sticky-show">
+<button class="toggle-nav-panel" type="button" aria-label="Menu" aria-controls="navigation">
+<i class="icomoon-icon icon-menu"></i>
+</button>
+<div class="logo-holder text-right show-for-large">
+<a href="/"><img src="/themes/custom/sayidaty/assets/img/logo/logo-new3.png?ssss" alt="Logo"></a>
+</div>
+</div>
+<div class="cell auto xlarge-6 show-for-large">
+<nav class="nav-holder">
+<ul class="menu align-center ">
+<li class="menu-item">
+<a href="/category/main/%D9%85%D8%B4%D8%A7%D9%87%D9%8A%D8%B1" data-drupal-link-system-path="taxonomy/term/3">مشاهير</a>
+</li>
+<li class="menu-item">
+<a href="/category/main/%D9%85%D8%AC%D9%88%D9%87%D8%B1%D8%A7%D8%AA" data-drupal-link-system-path="taxonomy/term/474886">مجوهرات</a>
+</li>
+<li class="menu-item">
+<a href="/category/main/%D8%A3%D8%B2%D9%8A%D8%A7%D8%A1" data-drupal-link-system-path="taxonomy/term/41">أزياء</a>
+</li>
+<li class="menu-item">
+<a href="/category/main/%D8%AC%D9%85%D8%A7%D9%84" data-drupal-link-system-path="taxonomy/term/4">جمال</a>
+</li>
+<li class="menu-item">
+<a href="/category/main/%D8%B5%D8%AD%D8%A9" data-drupal-link-system-path="taxonomy/term/17171">صحة</a>
+</li>
+<li class="menu-item">
+<a href="/category/main/%D8%B3%D9%8A%D8%A7%D8%AD%D8%A9" data-drupal-link-system-path="taxonomy/term/474881">سياحة</a>
+</li>
+<li class="menu-item">
+<a href="/category/main/%D9%84%D8%A7%D9%8A%D9%81-%D8%B3%D8%AA%D8%A7%D9%8A%D9%84" data-drupal-link-system-path="taxonomy/term/6">لايف ستايل</a>
+</li>
+<li class="menu-item">
+<a href="/category/main/%D8%AA%D9%82%D9%86%D9%8A%D8%A9" data-drupal-link-system-path="taxonomy/term/496356">تقنية</a>
+</li>
+<li class="menu-item">
+<a href="/wedding" data-drupal-link-system-path="taxonomy/term/37236">عروس</a>
+</li>
+<li class="menu-item">
+<a href="https://tv.sayidaty.net/">فيديو&nbsp;<img src="/themes/custom/sayidaty/assets/img/icons/tv-icon.png" alt="ico" /></a>
+</li>
+<li class="menu-item">
+<a href="https://kitchen.sayidaty.net/">مطبخ&nbsp;<img src="/themes/custom/sayidaty/assets/img/icons/cook-icon.png" alt="ico" /></a>
+</li>
+</ul>
+<span class="more-menu"><i class="icomoon-icon icon-add-outline"></i></span>
+</nav>
+</div>
+<div class="cell auto xlarge-6 hide-for-large">
+<div class="top-logo text-center">
+<a href="/"><img src="/themes/custom/sayidaty/assets/img/logo/logo-new3.png?sssss" alt="Logo"></a>
+</div>
+</div>
+<div class="cell shrink medium-2 large-shrink xlarge-2 sticky-show">
+<div class="icons-holder">
+<div class="show-for-medium">
+<i class="icomoon-icon icon-follow"></i>
+<div class="follow-on-social-media">
+<a href="https://www.facebook.com/sayidatynetpage"><i class="icomoon-icon icon-facebook"></i></a>
+<a href="https://twitter.com/sayidatynet"><i class="icomoon-icon icon-twitter"></i></a>
+<a href="https://www.instagram.com/sayidatynet"><i class="icomoon-icon icon-instagram"></i></a>
+<a href="https://vm.tiktok.com/7RJ3dM/"><i class="icomoon-icon icon-tiktok"></i></a>
+<a href="https://www.snapchat.com/discover/Sayidaty/3820158893"><i class="icomoon-icon icon-snapchat-ghost"></i></a>
+<a href="https://www.youtube.com/channel/UCOSMJgnSejyeuyPAY4T6wiQ?sub_confirmation=1"><i class="icomoon-icon icon-youtube"></i></a>
+</div>
+</div>
+<a href="#" class="search-trigger"><i class="icomoon-icon icon-search"></i></a>
+ </div>
+<div class="search-overlay">
+<div class="grid-container">
+<div class="search-overlay-close-button text-left">
+<a href="#"><i class="icomoon-icon icon-close"></i></a>
+</div>
+<div class="search-overlay-inner">
+<div class="search-area">
+<form class="views-exposed-form" data-drupal-selector="views-exposed-form-solrcontent-page-1" action="/search/site" method="get" id="views-exposed-form-solrcontent-page-1" accept-charset="UTF-8" data-drupal-form-fields="edit-search-api-fulltext">
+<input placeholder="أدخل كلمة البحث…" name="search_api_fulltext" title="أدخل كلمة البحث" data-drupal-selector="edit-keys" type="text" id="edit-keys" name="keys" value="" size="15" maxlength="128" autofocus>
+<input data-drupal-selector="edit-submit-solrcontent" type="submit" data-drupal-selector="edit-submit" id="edit-submit" value="&#xe932;">
+</form>
+</div>
+<p>اكتب الكلمات الرئيسية فى البحث</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header> <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+
+<div id='div-gpt-ad-1621761393500-0-oop'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1621761393500-0-oop');});
+</script>
+</div>
+
+<div id='div-gpt-ad-1621761393500-0'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1621761393500-0'); });
+</script>
+</div>
+<div class="disappearing-ad_js disappearing-ad" id="sticky-ad-header">
+<div class="block-wrapper">
+<div class="block-content">
+<div class="ad-holder small text-center">
+
+<div id='div-gpt-ad-1621761393500-1'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1621761393500-1'); });
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<main>
+<style>
+        .entry-content iframe{
+            width:100%;
+        }
+    </style>
+<div class="text-center"> <div class="region region-header">
+<div data-drupal-messages-fallback class="hidden"></div>
+</div>
+</div>
+<div class="articles-entries grid-container small-grid-collapse  ">
+<div class="entry-article-wrapper">
+<div class="grid-x grid-margin-x align-center">
+<div class="cell">
+<div class="breadcrumbs-wrapper">
+<ul class="breadcrumbs">
+<li><a href="/">الرئيسية</a></li>
+<li><a href="/taxonomy/term/474871">بلس+</a></li>
+<li>
+<a href="/taxonomy/term/944">أخبار</a>
+</li>
+</ul>
+</div>
+<div class="entry-title">
+<h1>
+أجمل صور الأرض من الفضاء
+</h1>
+ </div>
+<div class="entry-meta">
+<ul class="menu">
+<li class="entry-category hide-for-small-only"><a href="/taxonomy/term/944">
+أخبار</a></li>
+<li class="entry-country">
+<a href="/taxonomy/term/425466">
+سيدتي
+- مي مصطفى
+</a>
+</li>
+<li class="entry-date"><span>
+23 يناير 2021
+</span></li>
+</ul>
+</div>
+</div>
+<div class="cell large-auto">
+<script>
+    window._io_config = window._io_config || {};
+    window._io_config["0.2.0"] = window._io_config["0.2.0"] || [];
+    window._io_config["0.2.0"].push({
+        page_url: "https://www.sayidaty.net/node/1175456/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%AA%D8%AD%D9%82%D9%8A%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/%D8%A3%D8%AC%D9%85%D9%84-%D8%B5%D9%88%D8%B1-%D8%A7%D9%84%D8%A3%D8%B1%D8%B6-%D9%85%D9%86-%D8%A7%D9%84%D9%81%D8%B6%D8%A7%D8%A1",
+        page_url_canonical: "https://www.sayidaty.net/node/1175456",
+        page_title: "أجمل صور الأرض من الفضاء",
+        page_type: "article",
+        page_language: "ar",
+                tag: [   "شروق الشمس"  ,    "رواد الفضاء"  ,    "الجاذبية الأرضية"  ,    "القمر"  ,    "الطاقة الكهربائية"  ],                article_authors: ['مي مصطفى'],
+                        article_categories: ["بلس+", " أخبار"],
+
+                                article_subcategories: [" أخبار"],                article_type: "/sites/default/files/styles/681x999/public/2021/01/20/7310556-1124646722.jpg?itok=jQh2M1tb",
+                article_publication_date: "Sat, 23 Jan 2021 6:01:30 +0000"
+            });
+</script>
+<div class="content-wrap" id="content-articles">
+<div class="pageWrapper">
+<span class='hidden-title' style='display:none'>أجمل صور الأرض من الفضاء</span>
+<span class='hidden-url' style='display:none' data-url="https://www.sayidaty.net/node/1175456">/node/1175456/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%AA%D8%AD%D9%82%D9%8A%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/%D8%A3%D8%AC%D9%85%D9%84-%D8%B5%D9%88%D8%B1-%D8%A7%D9%84%D8%A3%D8%B1%D8%B6-%D9%85%D9%86-%D8%A7%D9%84%D9%81%D8%B6%D8%A7%D8%A1</span>
+<div class="entry-article">
+<div class="entry-media">
+<div class="media-slider slick-loading-area">
+<div class="field field--name-field-image field--type-image field--label-hidden slider-item">
+<div class="slider-item-img">
+<img title="" alt="" data-lazy="/sites/default/files/styles/900_scale/public/2021/01/20/7310556-1124646722.jpg?itok=W8_8_OLV" />
+</div>
+<div class="slider-item-caption">
+<strong> </strong>
+</div>
+</div>
+</div>
+</div>
+
+<div id="pixelpurehat_video"></div>
+
+<div class="grid-x entry-article-inner align-center">
+<div class="cell">
+<div class="entry-content" data-io-article-url="https://www.sayidaty.net/node/1175456/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%AA%D8%AD%D9%82%D9%8A%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/%D8%A3%D8%AC%D9%85%D9%84-%D8%B5%D9%88%D8%B1-%D8%A7%D9%84%D8%A3%D8%B1%D8%B6-%D9%85%D9%86-%D8%A7%D9%84%D9%81%D8%B6%D8%A7%D8%A1">
+<div class="block-wrapper">
+<div class="block-wrapper">
+<div class="block-content">
+<div class=" text-center">
+
+<div id='div-gpt-ad-1621761393500-4'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1621761393500-4'); });
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="field field--name-body field--type-text-with-summary field--label-hidden field__item"><p>نشرت أخيرا وكالة الفضاء الأميركية «ناسا» فيديو لأفضل 20 صورة للأرض في العام 2020، التقطها رواد الفضاء من محطة الفضاء الدولية...وتضمن الفيديو صوراً مذهلة، ومناظر طبيعية رائعة، فضلاً عن مدن مترامية الأطراف، بينما سلطت صور أخرى الضوء على بعض التحديات التي تواجه كوكبنا كحرائق الغابات، ومن بين الصور المبهرة البحيرات العظمى في أميركا الشمالية، والقمر فوق المحيط الأطلسي، و<a href="https://www.sayidaty.net/node/1175006/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%AA%D8%AD%D9%82%D9%8A%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/%D8%A3%D8%BA%D8%B1%D8%A8-%D8%A7%D9%84%D8%AA%D9%85%D8%A7%D8%AB%D9%8A%D9%84-%D8%AD%D9%88%D9%84-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85#photo/1">شروق الشمس</a> فوق أستراليا، وتألق باريس ليلاً، حسبما ذكر موقع «ديجيتال تريندز» المتخصص بالأخبار العلمية والتقنية.</p>
+<p> </p>
+<h2>المحطة الدولية تستقبل أطقم رواد الفضاء</h2>
+<div style="text-align:center">
+<figure class="image" style="display:inline-block"><img alt="" height="397" src="https://www.sayidaty.net/sites/default/files/pictures/January/1191141/2021/201992513294022210.jpg" width="700" /><figcaption>محطة الفضاء الدولية</figcaption></figure></div>
+<p><br />
+ويعود تاريخ بناء المحطة الدولية إلى العام 1998، حيث شيدت بتعاون كل من الولايات المتحدة وروسيا، وبتمويل من كندا واليابان و10 دول أوروبية.<br />
+وبدأت المحطة باستقبال أطقم<a href="https://www.sayidaty.net/node/1174596/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%AA%D8%AD%D9%82%D9%8A%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/%D8%A3%D8%BA%D9%84%D9%89-%D9%85%D9%86%D8%B2%D9%84-%D9%81%D9%8A-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85-%D8%B3%D8%B9%D8%B1%D9%87-%D9%88%D9%85%D9%88%D8%A7%D8%B5%D9%81%D8%A7%D8%AA%D9%87#photo/1"> رواد الفضاء</a> منذ مطلع القرن الحالي، وتحديداً منذ شهر نوفمبر عام 2000، علماً بأنها تضم على متنها طاقما دولياً مكوناً من 6 رواد فضاء يقضون 35 ساعة أسبوعياً في إجراء أبحاث علمية عميقة في مختلف التخصصات العلمية الفضائية والفيزيائية والبيولوجية وعلوم الأرض.</p>
+<h2><br />
+تحضير الإنسان ليمضي أوقات أطول في الفضاء</h2>
+<div style="text-align:center">
+<figure class="image" style="display:inline-block"><img alt="" height="444" src="https://www.sayidaty.net/sites/default/files/pictures/January/1191141/2021/7304211-975394086.jpg" width="793" /><figcaption>صورة للأرض</figcaption></figure></div>
+<p>وتدور المحطة على ارتفاع 390 كيلومتراً من سطح كوكب الأرض، وأطلقت لتأخذ محل ومهام المحطة الفضائية الروسية «مير»، بهدف تحضير الإنسان لتمضية أوقات طويلة في الفضاء، وإجراء التجارب خارج منطقة<a href="https://www.sayidaty.net/node/1174876/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%AA%D8%AD%D9%82%D9%8A%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/%D8%B4%D8%AC%D8%B1%D8%A9-%D8%A7%D9%84%D8%AD%D9%8A%D8%A7%D8%A9%D8%8C-%D8%A7%D9%84%D9%85%D8%B2%D8%A7%D8%B1-%D8%A7%D9%84%D8%B0%D9%8A-%D8%A3%D8%A8%D8%B9%D8%AF%D8%AA-%D9%83%D9%88%D8%B1%D9%88%D9%86%D8%A7-%D8%B9%D9%86%D9%87-%D8%A7%D9%84%D8%B2%D9%88%D8%A7%D8%B1#photo/1"> الجاذبية الأرضية.</a><br />
+وتسير المحطة في الفضاء بسرعة 27 ألف و600 كيلومتر في الساعة، مما يعني أنها قادرة على أن تدور حول كوكب الأرض بأسره كل 90 دقيقة فقط، ويمكنها الذهاب للقمر والعودة في أقل من 24 ساعة.</p>
+<p> </p>
+<h2>مساحة المحطة الدولية.. مساحة أستاد كرة قدم</h2>
+<div style="text-align:center">
+<figure class="image" style="display:inline-block"><img alt="" height="464" src="https://www.sayidaty.net/sites/default/files/pictures/January/1191141/2021/7304206-694786853_0.jpg" width="824" /><figcaption>صورة رائعة للأرض</figcaption></figure></div>
+<p><br />
+ويبلغ طول المحطة حوالي 109 أمتار، بينما يصل عرضها لـ72.8 متراً، بما يوازي مساحة استاد كرة قدم كبير، لذلك فإنها توفر لرواد الفضاء الكثير من الغرف المريحة لفترات الأكل والنوم.<br />
+وتعتبر المحطة الدولية أغلى بناء أنشئ عن طريق البشر على الإطلاق، حيث قدرت تكلفتها بأكثر من 150 مليار دولار.<br />
+وتستخدم المحطة الخلايا الشمسية الضخمة على جانبيها لتوليد<a href="https://www.sayidaty.net/node/1174536/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%AA%D8%AD%D9%82%D9%8A%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/%D9%8A%D8%A7%D8%A8%D8%A7%D9%86%D9%8A-%D9%8A%D8%B9%D8%B1%D8%B6-%D9%86%D9%81%D8%B3%D9%87-%D9%84%D9%84%D8%A5%D9%8A%D8%AC%D8%A7%D8%B1-%D9%85%D9%86-%D8%AF%D9%88%D9%86-%D8%A7%D9%84%D9%82%D9%8A%D8%A7%D9%85-%D8%A8%D8%B9%D9%85%D9%84#photo/1"> الطاقة الكهربائية</a> اللازمة لتشغيلها،</p>
+<p> </p>
+<h2>تعتمد المحطة في دورانها على حسابات معقدة</h2>
+<div style="text-align:center">
+<figure class="image" style="display:inline-block"><img alt="" height="553" src="https://www.sayidaty.net/sites/default/files/pictures/January/1191141/2021/7304216-310524227.jpg" width="832" /><figcaption>صورة مذهلة للأرض</figcaption></figure></div>
+<p>أما فيما يتعلق بحركة دورانها فهي تدور حول الأرض بزاوية ميل 22.5 درجة، لذلك فهي لا تمر من نفس المكان في كل مرة تدور فيها حول الأرض وتعتمد على حسابات معقدة لاستغلال الجاذبية مع وجود دافعات للحفاظ على المدار والسرعة.<br />
+وتضم الأنظمة الكهربائية في محطة الفضاء الدولية 13 كيلو متراً من الأسلاك، وتحتاج لأعمال صيانة دورية بشكل يومي للحفاظ على كفاءتها.<br />
+وتستمد المحطة الأوكسجين من خلال عملية تحليل كهربائي تسمى «Electrolysis»، التي تقوم على استخدام التيار كهربائي المتولد من<a href="https://www.sayidaty.net/node/1173966/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%AA%D8%AD%D9%82%D9%8A%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/2021-%D8%A3%D9%82%D8%B5%D8%B1-%D8%B9%D8%A7%D9%85-%D9%85%D9%86%D8%B0-50-%D8%B3%D9%86%D8%A9-%D9%88%D8%A7%D9%84%D9%8A%D9%88%D9%85-%D8%A3%D8%B5%D8%A8%D8%AD-%D8%A3%D9%82%D9%84-%D9%85%D9%86-24-%D8%B3%D8%A7%D8%B9%D8%A9#photo/1"> الألواح الشمسية </a>للمحطة لتقسيم جزيئات الماء إلى هيدروجين وأوكسجين، ومن ثم الحصول على الأوكسجين.</p>
+</div>
+</div>
+<div class="entry-meta-footer">
+<div class="grid-x align-justify">
+<div class="cell">
+<div class="entry-shares-wrapper">
+<a href="#" class="addthis_button_facebook facebook-btn-hover circle"><i class="icomoon-icon icon-facebook"></i></a>
+<a href="#" class="addthis_button_twitter -btn-hover circle"><i class="icomoon-icon icon-twitter"></i></a>
+<a href="#" class="addthis_button_pinterest pinterest-btn-hover circle"><i class="icomoon-icon icon-pinterest"></i></a>
+<a href="#" class="addthis_button_linkedin linkedin-btn-hover circle"><i class="icomoon-icon icon-linkedin"></i></a>
+<a href="#" class=" addthis_button_whatsapp  whatsapp-btn-hover circle"><i class="icomoon-icon icon-whatsapp circle"></i></a>
+<a href="#" class="link-btn-hover circle" id="clipboardCopy" class="button" type="button" data-tooltip title="نسخ الرابط" data-disable-hover="true"><i class="icomoon-icon icon-link circle"></i></a>
+</div>
+</div>
+</div>
+</div>
+<div class="entry-tags">
+<span>سمات:</span>
+<ul>
+<li>
+<a href="/taxonomy/term/944"> أخبار</a>
+</li>
+<li><a href="/taxonomy/term/106176">
+#شروق الشمس
+</a>
+</li>
+<li><a href="/taxonomy/term/148376">
+#رواد الفضاء
+</a>
+</li>
+<li><a href="/taxonomy/term/133336">
+#الجاذبية الأرضية
+</a>
+</li>
+<li><a href="/taxonomy/term/11704">
+#القمر
+</a>
+</li>
+<li><a href="/taxonomy/term/173201">
+#الطاقة الكهربائية
+</a>
+</li>
+</ul>
+</div>
+<div class="entry-related">
+<div class="related-items gutters-1x grid-x align-justify small-up-1 medium-up-2 large-up-2">
+<div class="cell">
+<div class="views-element-container"><div class="view view-latest-articles view-id-latest_articles view-display-id-block_3 js-view-dom-id-f60bef0818bcc329127af6436fbad99ea04d8cda19fcf9061c2895c537cc7bd8">
+<div class="view-content">
+<h4><span>الموضوع السابق</span></h4>
+<div role="article" class="media-object views-row  node--type-article node--promoted node--sticky node--view-mode-media-object-two" data-vr-contentbox="position 0" data-vr-contentbox-url="https://www.sayidaty.net//node/1175406/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-%D8%AA%D8%B9%D9%84%D9%86-%D8%A5%D8%B7%D9%84%D8%A7%D9%82-%D8%AD%D9%85%D9%84%D8%A9-%D8%A7%D9%84%D8%AA%D9%88%D8%B9%D9%8A%D8%A9-%D8%A8%D9%80%D8%A7%D9%84%D8%A3%D9%85%D9%86">
+<div class="cell">
+<div class="media-object">
+<div class="media-object-section position-relative">
+<a href="/node/1175406/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-%D8%AA%D8%B9%D9%84%D9%86-%D8%A5%D8%B7%D9%84%D8%A7%D9%82-%D8%AD%D9%85%D9%84%D8%A9-%D8%A7%D9%84%D8%AA%D9%88%D8%B9%D9%8A%D8%A9-%D8%A8%D9%80%D8%A7%D9%84%D8%A3%D9%85%D9%86">
+<img src="/sites/default/files/styles/445x283/public/2021/01/20/7304051-425706591.jpg?itok=AH1VbnSy" alt="التعليم السعودية تعلن إطلاق حملة التوعية بـ&quot;الأمن السيبراني&quot;" title="التعليم السعودية تعلن إطلاق حملة التوعية بـ&quot;الأمن السيبراني&quot;" />
+</a>
+</div>
+<div class="media-object-section">
+<div class="article-item-category">
+<div class="field field--name-field-section field--type-entity-reference field--label-hidden field__item"><a href="/category/main/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1" hreflang="ar">أخبار</a></div>
+</div>
+<div class="article-item-title">
+<h5 data-vr-headline>
+<a href="/node/1175406/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%A7%D9%84%D8%AA%D8%B9%D9%84%D9%8A%D9%85-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-%D8%AA%D8%B9%D9%84%D9%86-%D8%A5%D8%B7%D9%84%D8%A7%D9%82-%D8%AD%D9%85%D9%84%D8%A9-%D8%A7%D9%84%D8%AA%D9%88%D8%B9%D9%8A%D8%A9-%D8%A8%D9%80%D8%A7%D9%84%D8%A3%D9%85%D9%86" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">التعليم السعودية تعلن إطلاق حملة التوعية بـ&quot;الأمن السيبراني&quot;</span>
+</a>
+</h5>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="views-element-container"><div class="view view-latest-articles view-id-latest_articles view-display-id-block_2 js-view-dom-id-00e13aaf750ce51b8a115bc375e18eca666cdf1e6a2d4cf8f84cdc51a208ee22">
+<div class="view-content">
+<h4><span>الموضوع التالى</span></h4>
+<div role="article" class="media-object views-row  node--type-article node--promoted node--sticky node--view-mode-media-object-two" data-vr-contentbox="position 0" data-vr-contentbox-url="https://www.sayidaty.net//node/1175506/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%AA%D8%AD%D9%82%D9%8A%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/%D8%A3%D8%B9%D9%84%D9%89-%D8%AC%D8%A8%D8%A7%D9%84-%D9%81%D9%8A-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85">
+<div class="cell">
+<div class="media-object">
+<div class="media-object-section position-relative">
+<a href="/node/1175506/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%AA%D8%AD%D9%82%D9%8A%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/%D8%A3%D8%B9%D9%84%D9%89-%D8%AC%D8%A8%D8%A7%D9%84-%D9%81%D9%8A-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85">
+<img src="/sites/default/files/styles/445x283/public/2021/01/20/7304401-907588645.jpg?itok=Ds7D9JZS" alt="أعلى جبال في العالم" title="k2" />
+</a>
+</div>
+<div class="media-object-section">
+<div class="article-item-category">
+<div class="field field--name-field-section field--type-entity-reference field--label-hidden field__item"><a href="/category/main/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1" hreflang="ar">أخبار</a></div>
+</div>
+<div class="article-item-title">
+<h5 data-vr-headline>
+<a href="/node/1175506/%D8%A3%D8%B3%D8%B1%D8%A9-%D9%88%D9%85%D8%AC%D8%AA%D9%85%D8%B9/%D8%AA%D8%AD%D9%82%D9%8A%D9%82%D8%A7%D8%AA-%D8%A7%D9%84%D8%B3%D8%A7%D8%B9%D8%A9/%D8%A3%D8%B9%D9%84%D9%89-%D8%AC%D8%A8%D8%A7%D9%84-%D9%81%D9%8A-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">أعلى جبال في العالم</span>
+</a>
+</h5>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell large-shrink">
+<div class="sidebar-wrap">
+<div class="sticky-side-mpu">
+<div class="block-wrapper">
+<div class="block-content">
+<div class="ad-holder text-center">
+
+<div id='div-gpt-ad-1621761393500-2'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1621761393500-2'); });
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="block-wrapper style-v1 padding-horizontal-1">
+<div class="block-title flex-container align-justify align-middle">
+<h3><a href="/issuepdf"> إصدارات مجلة سيدتي</a></h3>
+<div class="arrow-link">
+<a href="/issuepdf"><i class="icomoon-icon icon-arrow-left"></i></a>
+</div>
+</div>
+<div class="block-content">
+<div class="views-element-container"><div class="view view-issue view-id-issue view-display-id-block_1 js-view-dom-id-5bc379609b097622e054a347a5ad4b67ea94a9685098489c7dc0133581c62862">
+<div class="view-content">
+<div class="views-row"><div role="article" class="magazine text-center views-row  node--type-issue node--promoted node--sticky node--view-mode-teaser">
+<a target="_blank" href="https://magazine.sayidaty.net/books/umfa">
+<img src="/sites/default/files/styles/415x548/public/2022-06/2155%20Cover%20online%20Banners8.jpg?itok=MfdflNdK" alt="مجلة سيدتي النسخة الرقمية العدد 2155" title="مجلة سيدتي النسخة الرقمية العدد 2155" />
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="block-wrapper style-v2 padding-horizontal-1">
+<div class="block-title text-right">
+<h3><a href="/taxonomy/term/all">جديد سيدتي</a></h3>
+</div>
+<div class="block-content">
+<div class="views-element-container"><div class="view view-latest-articles view-id-latest_articles view-display-id-block_14 js-view-dom-id-29203f0be848c581b94be9d339bb67124bdd478a68de3eb3b1220f80947054ed">
+<div class="view-content">
+<div class="objects-list has-separator vertical-slider_js">
+<div role="article" class="object-item views-row node--type-article node--promoted node--sticky node--view-mode-object-media-circle">
+<div class="media-object align-right">
+<div class="media-object-section position-relative">
+<div class="media-object-img">
+<div class="article-item-img round">
+<a href="/node/1433036/%D8%AA%D9%82%D9%86%D9%8A%D8%A9/%D8%AA%D9%83%D9%86%D9%88%D9%84%D9%88%D8%AC%D9%8A%D8%A7/%D9%85%D8%A7-%D9%87%D9%88-%D8%A7%D9%84%D8%B1%D8%A7%D9%88%D8%AA%D8%B1-%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8-%D9%84%D8%AA%D9%82%D9%88%D9%8A%D8%A9-%D8%A5%D8%B4%D8%A7%D8%B1%D8%A9-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D9%88%D8%A7%D9%8A-%D9%81%D8%A7%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84"> <img src="/sites/default/files/styles/292x292/public/2022-06/127915.jpeg?h=b69e0e0e&amp;itok=BzukpL2k" alt="ما هو الراوتر المناسب لتقوية إشارة شبكة الواي فاي في المنزل" title="جهاز الراوتر" /></a>
+</div>
+</div>
+</div>
+<div class="media-object-section">
+<div class="article-item-title">
+<h5><a href="/node/1433036/%D8%AA%D9%82%D9%86%D9%8A%D8%A9/%D8%AA%D9%83%D9%86%D9%88%D9%84%D9%88%D8%AC%D9%8A%D8%A7/%D9%85%D8%A7-%D9%87%D9%88-%D8%A7%D9%84%D8%B1%D8%A7%D9%88%D8%AA%D8%B1-%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8-%D9%84%D8%AA%D9%82%D9%88%D9%8A%D8%A9-%D8%A5%D8%B4%D8%A7%D8%B1%D8%A9-%D8%B4%D8%A8%D9%83%D8%A9-%D8%A7%D9%84%D9%88%D8%A7%D9%8A-%D9%81%D8%A7%D9%8A-%D9%81%D9%8A-%D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84"><span class="field field--name-title field--type-string field--label-hidden">ما هو الراوتر المناسب لتقوية إشارة شبكة الواي فاي في المنزل</span>
+</a></h5>
+</div>
+</div>
+</div>
+</div>
+<div role="article" class="object-item views-row node--type-article node--promoted node--sticky node--view-mode-object-media-circle">
+<div class="media-object align-right">
+<div class="media-object-section position-relative">
+<div class="media-object-img">
+<div class="article-item-img round">
+<a href="/node/1433031/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%A8%D9%80-4-%D9%84%D8%BA%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A-%D9%84%D9%84%D8%A3%D8%B1%D8%B5%D8%A7%D8%AF-%D9%8A%D8%B5%D8%AF%D8%B1-%D8%AF%D9%84%D9%8A%D9%84%D8%A7-%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7-%D8%AA%D9%81%D8%A7%D8%B9%D9%84%D9%8A%D8%A7-%D9%8A%D9%82%D8%AF%D9%85-%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA"> <img src="/sites/default/files/styles/292x292/public/2022-06/128151.jpeg?h=61b80e5e&amp;itok=fJFevw6W" alt="دليل ارشادي للحجاج" title="المركز الوطني للأرصاد يصدر دليلا إلكترونيا يقدم معلومات الطقس للحجاج - الصوة من حساب المركز بتويتر" /></a>
+</div>
+</div>
+</div>
+<div class="media-object-section">
+<div class="article-item-title">
+<h5><a href="/node/1433031/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%A8%D9%80-4-%D9%84%D8%BA%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A-%D9%84%D9%84%D8%A3%D8%B1%D8%B5%D8%A7%D8%AF-%D9%8A%D8%B5%D8%AF%D8%B1-%D8%AF%D9%84%D9%8A%D9%84%D8%A7-%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7-%D8%AA%D9%81%D8%A7%D8%B9%D9%84%D9%8A%D8%A7-%D9%8A%D9%82%D8%AF%D9%85-%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA"><span class="field field--name-title field--type-string field--label-hidden">بـ 4 لغات.. المركز الوطني للأرصاد يصدر دليلا إلكترونيا تفاعليا يقدم معلومات الطقس للحجاج</span>
+</a></h5>
+</div>
+</div>
+</div>
+</div>
+<div role="article" class="object-item views-row node--type-article node--promoted node--sticky node--view-mode-object-media-circle">
+<div class="media-object align-right">
+<div class="media-object-section position-relative">
+<div class="media-object-img">
+<div class="article-item-img round">
+<a href="/node/1433026/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D9%83%D8%A7%D9%88%D8%B3%D8%AA-%D8%AA%D9%88%D9%82%D8%B9-%D8%A7%D8%AA%D9%81%D8%A7%D9%82%D9%8A%D8%A9-%D9%85%D8%B9-%D8%A3%D9%88%D8%B4%D9%86-%D8%A5%D9%8A%D8%B1%D9%88-%D9%84%D8%AC%D9%84%D8%A8-%D8%BA%D9%88%D8%A7%D8%B5%D8%A7%D8%AA-%D8%A8%D8%AD%D8%B1%D9%8A%D8%A9-%D9%84%D9%84%D8%A3%D8%A8%D8%AD%D8%A7%D8%AB-%D8%A8%D8%A7%D9%84%D8%A8%D8%AD%D8%B1-%D8%A7%D9%84%D8%A3%D8%AD%D9%85%D8%B1"> <img src="/sites/default/files/styles/292x292/public/2022-06/128153.jpeg?h=a3a506da&amp;itok=vtzVicFg" alt="جامعة كاوست توقع شراكة لجلب غواصات بحرية للأبحاث بالبحر الأحمر - الصورة من موقع كاوست" title="جامعة كاوست توقع شراكة لجلب غواصات بحرية للأبحاث بالبحر الأحمر - الصورة من موقع كاوست" /></a>
+</div>
+</div>
+</div>
+<div class="media-object-section">
+<div class="article-item-title">
+<h5><a href="/node/1433026/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D9%83%D8%A7%D9%88%D8%B3%D8%AA-%D8%AA%D9%88%D9%82%D8%B9-%D8%A7%D8%AA%D9%81%D8%A7%D9%82%D9%8A%D8%A9-%D9%85%D8%B9-%D8%A3%D9%88%D8%B4%D9%86-%D8%A5%D9%8A%D8%B1%D9%88-%D9%84%D8%AC%D9%84%D8%A8-%D8%BA%D9%88%D8%A7%D8%B5%D8%A7%D8%AA-%D8%A8%D8%AD%D8%B1%D9%8A%D8%A9-%D9%84%D9%84%D8%A3%D8%A8%D8%AD%D8%A7%D8%AB-%D8%A8%D8%A7%D9%84%D8%A8%D8%AD%D8%B1-%D8%A7%D9%84%D8%A3%D8%AD%D9%85%D8%B1"><span class="field field--name-title field--type-string field--label-hidden">&quot;كاوست&quot; توقع اتفاقية مع &quot;أوشن إيرو&quot; لجلب غواصات بحرية للأبحاث بالبحر الأحمر</span>
+</a></h5>
+</div>
+</div>
+</div>
+</div>
+<div role="article" class="object-item views-row node--type-article node--promoted node--sticky node--view-mode-object-media-circle">
+<div class="media-object align-right">
+<div class="media-object-section position-relative">
+<div class="media-object-img">
+<div class="article-item-img round">
+<a href="/node/1433021/%D9%85%D8%B4%D8%A7%D9%87%D9%8A%D8%B1/%D8%B3%D9%8A%D9%86%D9%85%D8%A7-%D9%88%D8%AA%D9%84%D9%81%D8%B2%D9%8A%D9%88%D9%86/%D8%A8%D8%A7%D9%84%D8%B5%D9%88%D8%B1-%D9%82%D8%B5%D9%8A-%D8%AE%D9%88%D9%84%D9%8A-%D9%88%D9%81%D8%A7%D9%84%D9%8A%D8%B1%D9%8A-%D8%A3%D8%A8%D9%88-%D8%B4%D9%82%D8%B1%D8%A7-%D9%8A%D8%AA%D8%B5%D8%AF%D8%B1%D8%A7%D9%86-%D8%A8%D9%88%D8%B3%D8%AA%D8%B1-%D9%85%D9%86%D8%A5%D9%84%D9%89-%D9%88%D8%A7%D9%84%D8%B9%D8%B1%D8%B6"> <img src="/sites/default/files/styles/292x292/public/2022-06/128109.jpeg?h=c8808067&amp;itok=5G8RdtiF" alt="قصي خولي - الصورة من حسابه على انستغرام" title="قصي خولي - الصورة من حسابه على انستغرام" /></a>
+</div>
+</div>
+</div>
+<div class="media-object-section">
+<div class="article-item-title">
+<h5><a href="/node/1433021/%D9%85%D8%B4%D8%A7%D9%87%D9%8A%D8%B1/%D8%B3%D9%8A%D9%86%D9%85%D8%A7-%D9%88%D8%AA%D9%84%D9%81%D8%B2%D9%8A%D9%88%D9%86/%D8%A8%D8%A7%D9%84%D8%B5%D9%88%D8%B1-%D9%82%D8%B5%D9%8A-%D8%AE%D9%88%D9%84%D9%8A-%D9%88%D9%81%D8%A7%D9%84%D9%8A%D8%B1%D9%8A-%D8%A3%D8%A8%D9%88-%D8%B4%D9%82%D8%B1%D8%A7-%D9%8A%D8%AA%D8%B5%D8%AF%D8%B1%D8%A7%D9%86-%D8%A8%D9%88%D8%B3%D8%AA%D8%B1-%D9%85%D9%86%D8%A5%D9%84%D9%89-%D9%88%D8%A7%D9%84%D8%B9%D8%B1%D8%B6"><span class="field field--name-title field--type-string field--label-hidden">بالصور.. قصي خولي وفاليري أبو شقرا يتصدران بوستر &quot;من..إلى&quot; والعرض قريباً</span>
+</a></h5>
+</div>
+</div>
+</div>
+</div>
+<div role="article" class="object-item views-row node--type-article node--promoted node--sticky node--view-mode-object-media-circle">
+<div class="media-object align-right">
+<div class="media-object-section position-relative">
+<div class="media-object-img">
+<div class="article-item-img round">
+<a href="/node/1433016/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%B1%D9%8A-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A-%D9%8A%D9%83%D8%B4%D9%81-%D8%AD%D9%82%D9%8A%D9%82%D8%A9-%D8%A5%D9%8A%D9%82%D8%A7%D9%81-%D8%A7%D9%84%D8%AF%D8%B9%D9%85-%D8%A7%D9%84%D8%B3%D9%83%D9%86%D9%8A-%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%81%D9%8A%D8%AF%D9%8A%D9%86-%D8%A8%D8%B9%D8%AF-%D8%A5%D8%B7%D9%84%D8%A7%D9%82-5"> <img src="/sites/default/files/styles/292x292/public/2022-06/128131.jpeg?h=cc513d2b&amp;itok=ICIwAlaM" alt="العقاري السعودي يكشف حقيقة إيقاف الدعم السكني عن المستفيدين.. بعد إطلاق 5 باقات جديدة" title="برنامج سكني" /></a>
+</div>
+</div>
+</div>
+<div class="media-object-section">
+<div class="article-item-title">
+<h5><a href="/node/1433016/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%B1%D9%8A-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A-%D9%8A%D9%83%D8%B4%D9%81-%D8%AD%D9%82%D9%8A%D9%82%D8%A9-%D8%A5%D9%8A%D9%82%D8%A7%D9%81-%D8%A7%D9%84%D8%AF%D8%B9%D9%85-%D8%A7%D9%84%D8%B3%D9%83%D9%86%D9%8A-%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%81%D9%8A%D8%AF%D9%8A%D9%86-%D8%A8%D8%B9%D8%AF-%D8%A5%D8%B7%D9%84%D8%A7%D9%82-5"><span class="field field--name-title field--type-string field--label-hidden">العقاري السعودي يكشف حقيقة إيقاف الدعم السكني عن المستفيدين.. بعد إطلاق 5 باقات جديدة</span>
+</a></h5>
+</div>
+</div>
+</div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="block-wrapper top">
+<div class="block-content">
+<div class="small text-center">
+
+<div id='div-gpt-ad-1621761393500-3'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1621761393500-3'); });
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid-x grid-margin-x align-center">
+<div class="cell">
+<div class="content-wrap">
+<hr>
+<div class="section-wrapper">
+<div class="section-title flex-container align-justify align-middle">
+<h2><a href="/taxonomy/term/944">المزيد من
+أخبار</a></h2>
+</div>
+<div class="section-content">
+<div class="grid-x grid-margin-x">
+<div class="cell">
+<div class="views-element-container"><div class="view view-latest-articles view-id-latest_articles view-display-id-block_1 js-view-dom-id-aa4a83f52bb827dc25425d0732e3182065f40efbd831516a52215f70e5ab182e">
+<div class="view-content">
+<div class="grid-x grid-margin-x small-up-1 medium-up-3">
+<div role="article" class="cell views-row  node--type-article node--promoted node--sticky node--view-mode-onebig-twosmall-secondimages" data-vr-contentbox="position 0" data-vr-contentbox-url="https://www.sayidaty.net//node/1433031/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%A8%D9%80-4-%D9%84%D8%BA%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A-%D9%84%D9%84%D8%A3%D8%B1%D8%B5%D8%A7%D8%AF-%D9%8A%D8%B5%D8%AF%D8%B1-%D8%AF%D9%84%D9%8A%D9%84%D8%A7-%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7-%D8%AA%D9%81%D8%A7%D8%B9%D9%84%D9%8A%D8%A7-%D9%8A%D9%82%D8%AF%D9%85-%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA">
+<div class="article-item mode-onebig_twosmall_firstimage">
+<div class="article-item-img">
+<a href="/node/1433031/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%A8%D9%80-4-%D9%84%D8%BA%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A-%D9%84%D9%84%D8%A3%D8%B1%D8%B5%D8%A7%D8%AF-%D9%8A%D8%B5%D8%AF%D8%B1-%D8%AF%D9%84%D9%8A%D9%84%D8%A7-%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7-%D8%AA%D9%81%D8%A7%D8%B9%D9%84%D9%8A%D8%A7-%D9%8A%D9%82%D8%AF%D9%85-%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA">
+<img src="/sites/default/files/styles/600x380/public/2022-06/128151.jpeg?h=61b80e5e&amp;itok=BC-_ESy1" alt="دليل ارشادي للحجاج" title="المركز الوطني للأرصاد يصدر دليلا إلكترونيا يقدم معلومات الطقس للحجاج - الصوة من حساب المركز بتويتر" />
+</a>
+</div>
+<div class="article-item-info">
+<div class="article-item-category">
+<div class="field field--name-field-section field--type-entity-reference field--label-hidden field__item"><a href="/category/main/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1" hreflang="ar">أخبار</a></div>
+</div>
+<div class="article-item-title">
+<h4 data-vr-headline>
+<a href="/node/1433031/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%A8%D9%80-4-%D9%84%D8%BA%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2-%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A-%D9%84%D9%84%D8%A3%D8%B1%D8%B5%D8%A7%D8%AF-%D9%8A%D8%B5%D8%AF%D8%B1-%D8%AF%D9%84%D9%8A%D9%84%D8%A7-%D8%A5%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7-%D8%AA%D9%81%D8%A7%D8%B9%D9%84%D9%8A%D8%A7-%D9%8A%D9%82%D8%AF%D9%85-%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">بـ 4 لغات.. المركز الوطني للأرصاد يصدر دليلا إلكترونيا تفاعليا يقدم معلومات الطقس للحجاج</span>
+</a>
+</h4>
+</div>
+</div>
+</div>
+</div>
+<div role="article" class="cell views-row  node--type-article node--promoted node--sticky node--view-mode-onebig-twosmall-secondimages" data-vr-contentbox="position 0" data-vr-contentbox-url="https://www.sayidaty.net//node/1433026/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D9%83%D8%A7%D9%88%D8%B3%D8%AA-%D8%AA%D9%88%D9%82%D8%B9-%D8%A7%D8%AA%D9%81%D8%A7%D9%82%D9%8A%D8%A9-%D9%85%D8%B9-%D8%A3%D9%88%D8%B4%D9%86-%D8%A5%D9%8A%D8%B1%D9%88-%D9%84%D8%AC%D9%84%D8%A8-%D8%BA%D9%88%D8%A7%D8%B5%D8%A7%D8%AA-%D8%A8%D8%AD%D8%B1%D9%8A%D8%A9-%D9%84%D9%84%D8%A3%D8%A8%D8%AD%D8%A7%D8%AB-%D8%A8%D8%A7%D9%84%D8%A8%D8%AD%D8%B1-%D8%A7%D9%84%D8%A3%D8%AD%D9%85%D8%B1">
+<div class="article-item mode-onebig_twosmall_firstimage">
+<div class="article-item-img">
+<a href="/node/1433026/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D9%83%D8%A7%D9%88%D8%B3%D8%AA-%D8%AA%D9%88%D9%82%D8%B9-%D8%A7%D8%AA%D9%81%D8%A7%D9%82%D9%8A%D8%A9-%D9%85%D8%B9-%D8%A3%D9%88%D8%B4%D9%86-%D8%A5%D9%8A%D8%B1%D9%88-%D9%84%D8%AC%D9%84%D8%A8-%D8%BA%D9%88%D8%A7%D8%B5%D8%A7%D8%AA-%D8%A8%D8%AD%D8%B1%D9%8A%D8%A9-%D9%84%D9%84%D8%A3%D8%A8%D8%AD%D8%A7%D8%AB-%D8%A8%D8%A7%D9%84%D8%A8%D8%AD%D8%B1-%D8%A7%D9%84%D8%A3%D8%AD%D9%85%D8%B1">
+<img src="/sites/default/files/styles/600x380/public/2022-06/128153.jpeg?h=a3a506da&amp;itok=nRz2w3zJ" alt="جامعة كاوست توقع شراكة لجلب غواصات بحرية للأبحاث بالبحر الأحمر - الصورة من موقع كاوست" title="جامعة كاوست توقع شراكة لجلب غواصات بحرية للأبحاث بالبحر الأحمر - الصورة من موقع كاوست" />
+
+</a>
+</div>
+<div class="article-item-info">
+<div class="article-item-category">
+<div class="field field--name-field-section field--type-entity-reference field--label-hidden field__item"><a href="/category/main/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1" hreflang="ar">أخبار</a></div>
+</div>
+<div class="article-item-title">
+<h4 data-vr-headline>
+<a href="/node/1433026/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D9%83%D8%A7%D9%88%D8%B3%D8%AA-%D8%AA%D9%88%D9%82%D8%B9-%D8%A7%D8%AA%D9%81%D8%A7%D9%82%D9%8A%D8%A9-%D9%85%D8%B9-%D8%A3%D9%88%D8%B4%D9%86-%D8%A5%D9%8A%D8%B1%D9%88-%D9%84%D8%AC%D9%84%D8%A8-%D8%BA%D9%88%D8%A7%D8%B5%D8%A7%D8%AA-%D8%A8%D8%AD%D8%B1%D9%8A%D8%A9-%D9%84%D9%84%D8%A3%D8%A8%D8%AD%D8%A7%D8%AB-%D8%A8%D8%A7%D9%84%D8%A8%D8%AD%D8%B1-%D8%A7%D9%84%D8%A3%D8%AD%D9%85%D8%B1" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">&quot;كاوست&quot; توقع اتفاقية مع &quot;أوشن إيرو&quot; لجلب غواصات بحرية للأبحاث بالبحر الأحمر</span>
+</a>
+</h4>
+</div>
+</div>
+</div>
+</div>
+<div role="article" class="cell views-row  node--type-article node--promoted node--sticky node--view-mode-onebig-twosmall-secondimages" data-vr-contentbox="position 0" data-vr-contentbox-url="https://www.sayidaty.net//node/1433016/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%B1%D9%8A-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A-%D9%8A%D9%83%D8%B4%D9%81-%D8%AD%D9%82%D9%8A%D9%82%D8%A9-%D8%A5%D9%8A%D9%82%D8%A7%D9%81-%D8%A7%D9%84%D8%AF%D8%B9%D9%85-%D8%A7%D9%84%D8%B3%D9%83%D9%86%D9%8A-%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%81%D9%8A%D8%AF%D9%8A%D9%86-%D8%A8%D8%B9%D8%AF-%D8%A5%D8%B7%D9%84%D8%A7%D9%82-5">
+<div class="article-item mode-onebig_twosmall_firstimage">
+<div class="article-item-img">
+<a href="/node/1433016/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%B1%D9%8A-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A-%D9%8A%D9%83%D8%B4%D9%81-%D8%AD%D9%82%D9%8A%D9%82%D8%A9-%D8%A5%D9%8A%D9%82%D8%A7%D9%81-%D8%A7%D9%84%D8%AF%D8%B9%D9%85-%D8%A7%D9%84%D8%B3%D9%83%D9%86%D9%8A-%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%81%D9%8A%D8%AF%D9%8A%D9%86-%D8%A8%D8%B9%D8%AF-%D8%A5%D8%B7%D9%84%D8%A7%D9%82-5">
+<img src="/sites/default/files/styles/600x380/public/2022-06/128131.jpeg?h=cc513d2b&amp;itok=BKGchEb6" alt="العقاري السعودي يكشف حقيقة إيقاف الدعم السكني عن المستفيدين.. بعد إطلاق 5 باقات جديدة" title="برنامج سكني" />
+</a>
+</div>
+<div class="article-item-info">
+<div class="article-item-category">
+<div class="field field--name-field-section field--type-entity-reference field--label-hidden field__item"><a href="/category/main/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1" hreflang="ar">أخبار</a></div>
+</div>
+<div class="article-item-title">
+<h4 data-vr-headline>
+<a href="/node/1433016/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%A7%D9%84%D8%B9%D9%82%D8%A7%D8%B1%D9%8A-%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A-%D9%8A%D9%83%D8%B4%D9%81-%D8%AD%D9%82%D9%8A%D9%82%D8%A9-%D8%A5%D9%8A%D9%82%D8%A7%D9%81-%D8%A7%D9%84%D8%AF%D8%B9%D9%85-%D8%A7%D9%84%D8%B3%D9%83%D9%86%D9%8A-%D8%B9%D9%86-%D8%A7%D9%84%D9%85%D8%B3%D8%AA%D9%81%D9%8A%D8%AF%D9%8A%D9%86-%D8%A8%D8%B9%D8%AF-%D8%A5%D8%B7%D9%84%D8%A7%D9%82-5" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">العقاري السعودي يكشف حقيقة إيقاف الدعم السكني عن المستفيدين.. بعد إطلاق 5 باقات جديدة</span>
+</a>
+</h4>
+</div>
+</div>
+</div>
+</div>
+<div role="article" class="cell views-row  node--type-article node--promoted node--sticky node--view-mode-onebig-twosmall-secondimages" data-vr-contentbox="position 0" data-vr-contentbox-url="https://www.sayidaty.net//node/1433011/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%B9%D8%A8%D8%B1-%D8%A7%D9%84%D9%85%D9%86%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%A8%D8%B1%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%AC%D9%88%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D8%B5%D8%AD%D8%A9-%D8%AA%D9%82%D8%AF%D9%85-%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D8%AC%D9%8A%D8%A9-%D9%84%D8%A3%D9%83%D8%AB%D8%B1-%D9%85%D9%86-216">
+<div class="article-item mode-onebig_twosmall_firstimage">
+<div class="article-item-img">
+<a href="/node/1433011/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%B9%D8%A8%D8%B1-%D8%A7%D9%84%D9%85%D9%86%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%A8%D8%B1%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%AC%D9%88%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D8%B5%D8%AD%D8%A9-%D8%AA%D9%82%D8%AF%D9%85-%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D8%AC%D9%8A%D8%A9-%D9%84%D8%A3%D9%83%D8%AB%D8%B1-%D9%85%D9%86-216">
+<img src="/sites/default/files/styles/600x380/public/2022-06/128107.jpeg?h=fbf4b26c&amp;itok=y7CQSC_1" alt="الصحة تقدم الخدمات العلاجية والوقائية لأكثر من 216 ألف حاج" title="وزارة الصحة" />
+</a>
+</div>
+<div class="article-item-info">
+<div class="article-item-category">
+<div class="field field--name-field-section field--type-entity-reference field--label-hidden field__item"><a href="/category/main/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1" hreflang="ar">أخبار</a></div>
+</div>
+<div class="article-item-title">
+<h4 data-vr-headline>
+<a href="/node/1433011/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%B9%D8%A8%D8%B1-%D8%A7%D9%84%D9%85%D9%86%D8%A7%D9%81%D8%B0-%D8%A7%D9%84%D8%A8%D8%B1%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%AC%D9%88%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%A8%D8%AD%D8%B1%D9%8A%D8%A9-%D8%A7%D9%84%D8%B5%D8%AD%D8%A9-%D8%AA%D9%82%D8%AF%D9%85-%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D9%84%D8%A7%D8%AC%D9%8A%D8%A9-%D9%84%D8%A3%D9%83%D8%AB%D8%B1-%D9%85%D9%86-216" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">عبر المنافذ البرية والجوية والبحرية.. الصحة تقدم الخدمات العلاجية لأكثر من 216 ألف حاج</span>
+</a>
+</h4>
+</div>
+</div>
+</div>
+</div>
+<div role="article" class="cell views-row  node--type-article node--promoted node--sticky node--view-mode-onebig-twosmall-secondimages" data-vr-contentbox="position 1" data-vr-contentbox-url="https://www.sayidaty.net//node/1433006/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%AF%D8%B9%D8%A7%D8%A1-%D9%85%D8%B3%D8%AA%D8%AC%D8%A7%D8%A8-%D9%8A%D9%88%D9%85-%D8%B9%D8%B1%D9%81%D8%A9">
+<div class="article-item mode-onebig_twosmall_firstimage">
+<div class="article-item-img">
+<a href="/node/1433006/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%AF%D8%B9%D8%A7%D8%A1-%D9%85%D8%B3%D8%AA%D8%AC%D8%A7%D8%A8-%D9%8A%D9%88%D9%85-%D8%B9%D8%B1%D9%81%D8%A9">
+<img src="/sites/default/files/styles/600x380/public/2022-06/128130.jpeg?h=6869ed1f&amp;itok=BHbphzZ9" alt="دعاء يوم عرفة" title="دعاء يوم عرفة" />
+</a>
+</div>
+<div class="article-item-info">
+<div class="article-item-category">
+<div class="field field--name-field-section field--type-entity-reference field--label-hidden field__item"><a href="/category/main/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1" hreflang="ar">أخبار</a></div>
+</div>
+<div class="article-item-title">
+<h4 data-vr-headline>
+<a href="/node/1433006/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%AF%D8%B9%D8%A7%D8%A1-%D9%85%D8%B3%D8%AA%D8%AC%D8%A7%D8%A8-%D9%8A%D9%88%D9%85-%D8%B9%D8%B1%D9%81%D8%A9" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">دعاء مستجاب يوم عرفة</span>
+</a>
+</h4>
+</div>
+</div>
+</div>
+</div>
+<div role="article" class="cell views-row  node--type-article node--promoted node--sticky node--view-mode-onebig-twosmall-secondimages" data-vr-contentbox="position 0" data-vr-contentbox-url="https://www.sayidaty.net//node/1433001/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%B4%D8%A4%D9%88%D9%86-%D8%A7%D9%84%D8%AD%D8%B1%D9%85%D9%8A%D9%86-%D8%AA%D8%B3%D8%AA%D8%B9%D8%B1%D8%B6-%D9%85%D8%AD%D8%B8%D9%88%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%A5%D8%AD%D8%B1%D8%A7%D9%85-%D8%A7%D9%84%D8%B3%D8%A8%D8%B9%D8%A9">
+<div class="article-item mode-onebig_twosmall_firstimage">
+<div class="article-item-img">
+<a href="/node/1433001/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%B4%D8%A4%D9%88%D9%86-%D8%A7%D9%84%D8%AD%D8%B1%D9%85%D9%8A%D9%86-%D8%AA%D8%B3%D8%AA%D8%B9%D8%B1%D8%B6-%D9%85%D8%AD%D8%B8%D9%88%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%A5%D8%AD%D8%B1%D8%A7%D9%85-%D8%A7%D9%84%D8%B3%D8%A8%D8%B9%D8%A9">
+<img src="/sites/default/files/styles/600x380/public/2022-06/128108.PNG?h=b51b9def&amp;itok=kOFb7ICG" alt="محظورات الإحرام - الصورة من موقع شؤون الحرمين" title="محظورات الإحرام - الصورة من موقع شؤون الحرمين" />
+</a>
+</div>
+<div class="article-item-info">
+<div class="article-item-category">
+<div class="field field--name-field-section field--type-entity-reference field--label-hidden field__item"><a href="/category/main/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1" hreflang="ar">أخبار</a></div>
+</div>
+<div class="article-item-title">
+<h4 data-vr-headline>
+<a href="/node/1433001/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1/%D8%B4%D8%A4%D9%88%D9%86-%D8%A7%D9%84%D8%AD%D8%B1%D9%85%D9%8A%D9%86-%D8%AA%D8%B3%D8%AA%D8%B9%D8%B1%D8%B6-%D9%85%D8%AD%D8%B8%D9%88%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%A5%D8%AD%D8%B1%D8%A7%D9%85-%D8%A7%D9%84%D8%B3%D8%A8%D8%B9%D8%A9" rel="bookmark"><span class="field field--name-title field--type-string field--label-hidden">شؤون الحرمين تستعرض محظورات الإحرام السبعة</span>
+</a>
+</h4>
+</div>
+</div>
+</div>
+</div> </div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell text-center">
+ <div class="show-more">
+<a href="/taxonomy/term/944" class="button secondary hollow">عرض المزيد</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid-x grid-margin-x">
+<div class="cell">
+<div class="block-wrapper top">
+<div class="block-content">
+<div class="ad-holder small text-center">
+
+<div id='div-gpt-ad-1621761393500-2'>
+<script type='text/javascript'>
+googletag.cmd.push(function() { googletag.display('div-gpt-ad-1621761393500-2'); });
+</script>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<footer id="main-footer">
+<div class="grid-container">
+<div class="main-footer-inner">
+<div class="grid-x grid-margin-x align-spaced">
+<div class="cell small-shrink medium-3 large-shrink text-center align-self-middle">
+<div class="footer-logo">
+<a href="/"><img src="/themes/custom/sayidaty/assets/img/logo/logo-new3.png?ssss" alt="Logo"></a>
+</div>
+<div class="follow-on-social-media">
+<a target="_blank" href="https://www.facebook.com/sayidatynetpage"><i class="icomoon-icon icon-facebook"></i></a>
+<a target="_blank" href="https://twitter.com/sayidatynet"><i class="icomoon-icon icon-twitter"></i></a>
+<a target="_blank" href="https://www.instagram.com/sayidatynet"><i class="icomoon-icon icon-instagram"></i></a>
+<a target="_blank" href="https://www.tiktok.com/@sayidaty"><i class="icomoon-icon icon-tiktok"></i></a>
+<a target="_blank" href="https://www.snapchat.com/discover/Sayidaty/3820158893"><i class="icomoon-icon icon-snapchat-ghost"></i></a>
+<a target="_blank" href="https://www.youtube.com/channel/UCOSMJgnSejyeuyPAY4T6wiQ?sub_confirmation=1"><i class="icomoon-icon icon-youtube"></i></a>
+<a target="_blank" href=" https://news.google.com/publications/CAAqJggKIiBDQklTRWdnTWFnNEtESE5oZVdsa1lYUjVMbTVsZENnQVAB?oc=3&ceid=SA:ar&hl=ar&gl=SA"><i class="icomoon-icon icon-newspaper"></i></a>
+<a class="nabd" href="https://nabd.com/sayidaty"></a>
+</div>
+</div>
+<div class="cell shrink small-3 medium-2 large-shrink">
+<ul class="menu vertical">
+<li><a href="/taxonomy/term/3">مشاهير</a></li>
+<li><a href="/taxonomy/term/41">أزياء</a></li>
+<li><a href="/taxonomy/term/474886">مجوهرات</a></li>
+<li><a href="/taxonomy/term/4">جمال</a></li>
+<li><a href="/taxonomy/term/17171">صحة</a></li>
+<li><a href="/taxonomy/term/474881">سياحة</a></li>
+<li><a href="/taxonomy/term/6">لايف ستايل</a></li>
+<li><a href="https://www.sayidaty.net/category/main/%D8%A7%D9%84%D8%AA%D9%82%D9%86%D9%8A%D8%A9/">تقنية</a></li>
+</ul>
+</div>
+<div class="cell shrink small-3 medium-2 large-shrink">
+<ul class="menu vertical">
+<li><a href="/category/tags/%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9-0">السعودية</a></li>
+<li><a href="/category/main/بلس/أخبار">أخبار</a></li>
+<li><a href="/category/main/بلس/حوارات">حوارات</a></li>
+<li><a href="/category/main/بلس/ثقافة-وفنون"> ثقافة وفنون</a></li>
+<li><a href="/category/main/بلس/حياتنا">حياتنا</a></li>
+<li><a href="/category/main/بلس/فعاليات">فعاليات</a></li>
+<li><a href="/category/main/بلس/شخصية-ملهمة"> شخصية ملهمة</a></li>
+<li><a href="/category/main/%D8%A8%D9%84%D8%B3/%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA" target="_blank"> سيارات </a></li>
+</ul>
+</div>
+<div class="cell shrink small-3 medium-2 large-shrink">
+<ul class="menu vertical">
+<li><a href="/taxonomy/term/46">سيدتى و طفلك</a></li>
+<li><a href="/wedding">عروس سيدتي</a></li>
+<li><a href="https://kitchen.sayidaty.net" target="_blank">مطبخ سيدتي</a></li>
+<li><a href="https://tv.sayidaty.net" target="_blank"> سيدتي TV</a></li>
+<li><a href="/mag"> مجلة سيدتي</a></li>
+<li><a href="http://www.aljamila.com" target="_blank">الجميلة</a></li>
+<li><a target="_blank" href="https://story.snapchat.com/p/ec880039-77eb-41e3-809f-59c9b9b46289/" target="_blank">لحظات سيدتي</a></li>
+</ul>
+</div>
+<div class="cell small-shrink medium-12 large-shrink">
+
+<div class="mc_embed_signup newsletter-area">
+<div class="newsletter-intro">
+<h5>إشترك فى النشرة البريدية ليصلك كل جديد</h5>
+</div>
+
+<form action="https://www.sayidaty.net/newsletter" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<div id="footer-mc_embed_signup_scroll" class="input-group">
+<input type="email" value="" name="EMAIL" class="email input-group-field" id="footer-mce-EMAIL" placeholder="البريد الإلكترونى" required>
+
+<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_bba8c5e5b576b1912240a8e75_8e833aa672" tabindex="-1" value=""></div>
+<div class="input-group-button">
+<input type="submit" value="إشترك" name="subscribe" id="footer-mc-embedded-subscribe" class="button">
+</div>
+</div>
+</form>
+<div class="footer-links">
+<ul>
+<li><a href="/node/69">عن سيدتي</a></li>
+<li><a href="/contact/feedback">اتصل بنا</a></li>
+<li><a href="/node/71">شروط الاستخدام</a></li>
+<li><a href="/node/72">أعلن معنا</a></li>
+<li><a href="/node/64">تطبيقات الموبايل</a></li>
+<li><a href="/sayidaty_team">فريق سيدتي</a></li>
+<li><a href="/issuepdf">&nbsp; إصدارات المجلة</a></li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+ </div>
+<div class="main-footer-after">
+<div class="copyright">
+جميع الحقوق محفوظة للشركة السعودية للأبحاث والنشر وتخضع لشروط وإتفاق الإستخدام © 2022
+</div>
+</div>
+</div>
+</footer>
+<div class="scrolltop-wrap scrollToTop-js">
+<a href="#" role="button" aria-label="Scroll to top">
+<i class="icomoon-icon icon-arrow-up1"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="canvas-panel custom-fluid-width custom-duration-400" off-canvas="nav-panel right overlay">
+
+<ul class="menu vertical menu-panel" data-accordion-menu>
+<li class="menu-item ">
+<a href="#">&nbsp;</a>
+<span><a href="/issuepdf">إصدارات مجلة سيدتي</a></span>
+</li>
+<li class="menu-item menu-item--active-trail " style="background-image: url(&quot;/themes/custom/sayidaty/assets/img/sayidaty_fe_can.png?sssss&quot;);background-size: contain;background-repeat: no-repeat;/*! width: 107px; */background-position-x: right;">
+<a href="/category/tags/%D8%B3%D9%8A%D8%AF%D8%AA%D9%8A-%D9%81%D9%8A-%D9%83%D8%A7%D9%86" data-drupal-link-system-path="taxonomy/term/497526" class="is-active" style="color: transparent;">#سيدتي في كان</a>
+</li>
+<li class="menu-item  menu-item--expanded">
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D9%85%D8%B4%D8%A7%D9%87%D9%8A%D8%B1">مشاهير</a></span>
+<ul class="menu vertical nested">
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D9%85%D8%B4%D8%A7%D9%87%D9%8A%D8%B1/%D8%B3%D9%8A%D9%86%D9%85%D8%A7-%D9%88%D8%AA%D9%84%D9%81%D8%B2%D9%8A%D9%88%D9%86">سينما وتلفزيون</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D9%85%D8%B4%D8%A7%D9%87%D9%8A%D8%B1/%D9%85%D8%B4%D8%A7%D9%87%D9%8A%D8%B1-%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%85">مشاهير العالم</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D9%85%D8%B4%D8%A7%D9%87%D9%8A%D8%B1/%D8%B9%D8%A7%D8%A6%D9%84%D8%A7%D8%AA-%D9%85%D9%84%D9%83%D9%8A%D8%A9">عائلات ملكية</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D9%85%D8%B4%D8%A7%D9%87%D9%8A%D8%B1/%D9%85%D8%B4%D8%A7%D9%87%D9%8A%D8%B1-%D8%A7%D9%84%D8%B9%D8%B1%D8%A8">مشاهير العرب</a></span>
+ </li>
+</ul>
+</li>
+<li class="menu-item  menu-item--expanded">
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D9%85%D8%AC%D9%88%D9%87%D8%B1%D8%A7%D8%AA">مجوهرات</a></span>
+<ul class="menu vertical nested">
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D9%85%D8%AC%D9%88%D9%87%D8%B1%D8%A7%D8%AA/%D9%85%D8%AC%D9%88%D9%87%D8%B1%D8%A7%D8%AA-%D9%81%D8%A7%D8%AE%D8%B1%D8%A9">مجوهرات فاخرة</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D9%85%D8%AC%D9%88%D9%87%D8%B1%D8%A7%D8%AA/%D9%85%D8%AC%D9%88%D9%87%D8%B1%D8%A7%D8%AA-%D8%B9%D8%B5%D8%B1%D9%8A%D8%A9">مجوهرات عصرية</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D9%85%D8%AC%D9%88%D9%87%D8%B1%D8%A7%D8%AA/%D9%85%D8%AC%D9%88%D9%87%D8%B1%D8%A7%D8%AA-%D9%85%D8%B4%D8%A7%D9%87%D9%8A%D8%B1">مجوهرات مشاهير</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D9%85%D8%AC%D9%88%D9%87%D8%B1%D8%A7%D8%AA/%D9%85%D8%AC%D9%88%D9%87%D8%B1%D8%A7%D8%AA-%D8%A7%D9%84%D8%B9%D8%B1%D9%88%D8%B3">مجوهرات العروس</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D9%85%D8%AC%D9%88%D9%87%D8%B1%D8%A7%D8%AA/%D8%B3%D8%A7%D8%B9%D8%A7%D8%AA">ساعات</a></span>
+</li>
+</ul>
+</li>
+<li class="menu-item  menu-item--expanded">
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A3%D8%B2%D9%8A%D8%A7%D8%A1">أزياء</a></span>
+<ul class="menu vertical nested">
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A3%D8%B2%D9%8A%D8%A7%D8%A1/%D9%85%D9%88%D8%B6%D8%A9">موضة</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A3%D8%B2%D9%8A%D8%A7%D8%A1/%D8%B9%D8%A8%D8%A7%D9%8A%D8%A7%D8%AA-%D9%88%D8%A3%D8%B2%D9%8A%D8%A7%D8%A1-%D9%85%D8%AD%D8%AC%D8%A8%D8%A7%D8%AA"> عبايات وأزياء محجبات</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A3%D8%B2%D9%8A%D8%A7%D8%A1/%D8%A3%D8%B2%D9%8A%D8%A7%D8%A1-%D8%B1%D8%AC%D8%A7%D9%84%D9%8A%D8%A9">أزياء رجالية</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A3%D8%B2%D9%8A%D8%A7%D8%A1/%D8%A3%D9%86%D8%A7%D9%82%D8%A9-%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D9%87%D9%8A%D8%B1">أناقة المشاهير</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A3%D8%B2%D9%8A%D8%A7%D8%A1/%D8%A5%D8%B7%D9%84%D8%A7%D9%84%D8%A9-%D8%A7%D9%84%D8%B9%D8%B1%D9%88%D8%B3">إطلالة العروس</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A3%D8%B2%D9%8A%D8%A7%D8%A1/%D8%A5%D9%83%D8%B3%D8%B3%D9%88%D8%A7%D8%B1%D8%A7%D8%AA">إكسسوارات</a></span>
+</li>
+</ul>
+</li>
+<li class="menu-item  menu-item--expanded">
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%AC%D9%85%D8%A7%D9%84">جمال</a></span>
+<ul class="menu vertical nested">
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A5%D8%B7%D9%84%D8%A7%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B4%D8%A7%D9%87%D9%8A%D8%B1">إطلالات المشاهير</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%AC%D9%85%D8%A7%D9%84/%D8%AC%D9%85%D8%A7%D9%84-%D8%A7%D9%84%D8%B9%D8%B1%D9%88%D8%B3">جمال العروس</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%AC%D9%85%D8%A7%D9%84/%D8%B4%D8%B9%D8%B1-%D9%88%D8%AA%D8%B3%D8%B1%D9%8A%D8%AD%D8%A7%D8%AA">شعر وتسريحات</a></span>
+</li>
+
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%AC%D9%85%D8%A7%D9%84/%D8%B9%D8%B7%D9%88%D8%B1">عطور</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%AC%D9%85%D8%A7%D9%84/%D8%B9%D9%86%D8%A7%D9%8A%D8%A9-%D8%A8%D8%A7%D9%84%D8%A8%D8%B4%D8%B1%D8%A9">عناية بالبشرة</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%AC%D9%85%D8%A7%D9%84/%D9%85%D9%83%D9%8A%D8%A7%D8%AC">مكياج</a></span>
+</li>
+</ul>
+</li>
+<li class="menu-item  menu-item--expanded">
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%B5%D8%AD%D8%A9">صحة</a></span>
+<ul class="menu vertical nested">
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%B5%D8%AD%D8%A9/%D8%A7%D9%84%D8%B5%D8%AD%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9">الصحة العامة</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%B5%D8%AD%D8%A9/%D8%A7%D9%84%D8%B5%D8%AD%D8%A9-%D8%A7%D9%84%D9%86%D9%81%D8%B3%D9%8A%D8%A9">الصحة النفسية</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%B5%D8%AD%D8%A9/%D8%B1%D8%B4%D8%A7%D9%82%D8%A9-%D9%88%D8%AA%D8%BA%D8%B0%D9%8A%D8%A9">رشاقة و تغذية</a></span>
+</li>
+</ul>
+</li>
+<li class="menu-item  menu-item--expanded">
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%B3%D9%8A%D8%A7%D8%AD%D8%A9">سياحة</a></span>
+<ul class="menu vertical nested">
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%B3%D9%8A%D8%A7%D8%AD%D8%A9/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1-%D8%A7%D9%84%D8%B3%D9%81%D8%B1">أخبار السفر</a></span>
+</li>
+
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%B3%D9%8A%D8%A7%D8%AD%D8%A9/%D9%81%D9%86%D8%A7%D8%AF%D9%82-%D9%88%D9%85%D9%86%D8%AA%D8%AC%D8%B9%D8%A7%D8%AA">فنادق ومنتجعات</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%B3%D9%8A%D8%A7%D8%AD%D8%A9/%D9%85%D8%B7%D8%A7%D8%B9%D9%85-%D9%88%D9%85%D9%82%D8%A7%D9%87%D9%8A">مطاعم ومقاهي</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%B3%D9%8A%D8%A7%D8%AD%D8%A9/%D9%86%D8%B5%D8%A7%D8%A6%D8%AD-%D8%A7%D9%84%D8%B3%D9%81%D8%B1">نصائح السفر</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%B3%D9%8A%D8%A7%D8%AD%D8%A9/%D9%88%D8%AC%D9%87%D8%A7%D8%AA-%D8%B3%D9%8A%D8%A7%D8%AD%D9%8A%D8%A9">وجهات سياحية</a></span>
+</li>
+</ul>
+</li>
+<li class="menu-item  menu-item--expanded">
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D9%84%D8%A7%D9%8A%D9%81-%D8%B3%D8%AA%D8%A7%D9%8A%D9%84">لايف ستايل</a></span>
+<ul class="menu vertical nested">
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D9%84%D8%A7%D9%8A%D9%81-%D8%B3%D8%AA%D8%A7%D9%8A%D9%84/%D8%A3%D9%81%D9%83%D8%A7%D8%B1-%D9%88%D9%85%D9%87%D8%A7%D8%B1%D8%A7%D8%AA">أفكار ومهارات</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D9%84%D8%A7%D9%8A%D9%81-%D8%B3%D8%AA%D8%A7%D9%8A%D9%84/%D8%A5%D8%AA%D9%8A%D9%83%D9%8A%D8%AA">إتيكيت</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D9%84%D8%A7%D9%8A%D9%81-%D8%B3%D8%AA%D8%A7%D9%8A%D9%84/%D8%AF%D9%8A%D9%83%D9%88%D8%B1">ديكور</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D9%84%D8%A7%D9%8A%D9%81-%D8%B3%D8%AA%D8%A7%D9%8A%D9%84/%D8%B1%D9%8A%D8%A7%D8%AF%D8%A9-%D8%A3%D8%B9%D9%85%D8%A7%D9%84">ريادة أعمال</a></span>
+</li>
+</ul>
+</li>
+<li class="menu-item  menu-item--expanded">
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%AA%D9%82%D9%86%D9%8A%D8%A9">تقنية</a></span>
+<ul class="menu vertical nested">
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%AA%D9%82%D9%86%D9%8A%D8%A9/%D8%AA%D9%83%D9%86%D9%88%D9%84%D9%88%D8%AC%D9%8A%D8%A7">تكنولوجيا</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%AA%D9%82%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D8%AA%D9%88%D8%A7%D8%B5%D9%84-%D8%A7%D9%84%D8%A5%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%D9%8A">التواصل الإجتماعي</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%AA%D9%82%D9%86%D9%8A%D8%A9/%D8%A7%D9%84%D9%88%D8%A7%D9%82%D8%B9-%D8%A7%D9%84%D8%A5%D9%81%D8%AA%D8%B1%D8%A7%D8%B6%D9%8A">الواقع الإفتراضي</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%AA%D9%82%D9%86%D9%8A%D8%A9/%D9%85%D9%88%D8%A7%D9%82%D8%B9-%D9%88%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA">مواقع وتطبيقات</a></span>
+</li>
+</ul>
+</li>
+<li class="menu-item  menu-item--expanded">
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%B3%D9%8A%D8%AF%D8%AA%D9%8A-%D9%88%D8%B7%D9%81%D9%84%D9%83">سيدتي وطفلك</a></span>
+<ul class="menu vertical nested">
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%B3%D9%8A%D8%AF%D8%AA%D9%8A-%D9%88%D8%B7%D9%81%D9%84%D9%83/%D8%A3%D8%B7%D9%81%D8%A7%D9%84-%D9%88%D9%85%D8%B1%D8%A7%D9%87%D9%82%D9%88%D9%86">أطفال ومراهقون</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%B3%D9%8A%D8%AF%D8%AA%D9%8A-%D9%88%D8%B7%D9%81%D9%84%D9%83/%D8%A7%D9%84%D8%AD%D9%85%D9%84-%D9%88%D8%A7%D9%84%D9%88%D9%84%D8%A7%D8%AF%D8%A9">الحمل والولادة</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%B3%D9%8A%D8%AF%D8%AA%D9%8A-%D9%88%D8%B7%D9%81%D9%84%D9%83/%D8%B5%D8%AD%D8%A9-%D8%A7%D9%84%D8%B7%D9%81%D9%84">صحة الطفل</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%B3%D9%8A%D8%AF%D8%AA%D9%8A-%D9%88%D8%B7%D9%81%D9%84%D9%83/%D9%85%D9%88%D9%84%D9%88%D8%AF%D9%83">مولودك</a></span>
+</li>
+</ul>
+</li>
+<li class="menu-item  menu-item--expanded">
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A8%D9%84%D8%B3">بلس+</a></span>
+<ul class="menu vertical nested">
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A8%D9%84%D8%B3/%D8%A3%D8%AE%D8%A8%D8%A7%D8%B1">أخبار</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A8%D9%84%D8%B3/%D8%A7%D9%84%D8%A3%D8%A8%D8%B1%D8%A7%D8%AC">الأبراج</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A8%D9%84%D8%B3/%D8%AB%D9%82%D8%A7%D9%81%D8%A9-%D9%88%D9%81%D9%86%D9%88%D9%86">ثقافة وفنون</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A8%D9%84%D8%B3/%D8%AD%D9%88%D8%A7%D8%B1%D8%A7%D8%AA">حوارات</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A8%D9%84%D8%B3/%D8%AD%D9%8A%D8%A7%D8%AA%D9%86%D8%A7">حياتنا</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A8%D9%84%D8%B3/%D9%81%D8%B9%D8%A7%D9%84%D9%8A%D8%A7%D8%AA">فعاليات</a></span>
+</li>
+
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A8%D9%84%D8%B3/%D8%B4%D8%AE%D8%B5%D9%8A%D8%A9-%D9%85%D9%84%D9%87%D9%85%D8%A9">شخصية ملهمة</a></span>
+</li>
+<li>
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%A8%D9%84%D8%B3/%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA">سيارات</a></span>
+</li>
+</ul>
+</li>
+<li class="menu-item ">
+<a href="#">&nbsp;</a>
+<span><a href="/ksa">السعودية</a></span>
+</li>
+<li class="menu-item ">
+<a href="#">&nbsp;</a>
+<span><a href="/uae">الإمارات</a></span>
+</li>
+<li class="menu-item ">
+<a href="#">&nbsp;</a>
+<span><a href="/wedding">عروس سيدتي</a></span>
+</li>
+<li class="menu-item ">
+<a href="#">&nbsp;</a>
+<span><a href="/style">ستايل</a></span>
+</li>
+<li class="menu-item ">
+<a href="#">&nbsp;</a>
+<span><a href="/category/tags/%D9%85%D8%AC%D9%84%D8%A9-%D8%B3%D9%8A%D8%AF%D8%AA%D9%8A">مجلة سيدتي</a></span>
+</li>
+<li class="menu-item ">
+<a href="#">&nbsp;</a>
+<span><a href="https://tv.sayidaty.net">فيديو <img src="/themes/custom/sayidaty/assets/img/icons/tv-icon.png" alt="ico" /></a></span>
+</li>
+<li class="menu-item ">
+<a href="#">&nbsp;</a>
+<span><a href="https://kitchen.sayidaty.net">مطبخ سيدتي <img src="/themes/custom/sayidaty/assets/img/icons/cook-icon.png" alt="ico" /></a></span>
+</li>
+<li class="menu-item ">
+<a href="#">&nbsp;</a>
+<span><a href="/blogs/%D9%85%D8%AF%D9%88%D9%86%D8%A7%D8%AA-%D8%B3%D9%8A%D8%AF%D8%AA%D9%8A">مدونات</a></span>
+</li>
+<li class="menu-item ">
+<a href="#">&nbsp;</a>
+<span><a href="/category/main/%D8%B5%D9%88%D8%B1-%D9%83%D9%88%D8%B1%D9%88%D9%86%D8%A7">معرض صور كورونا</a></span>
+</li>
+<li class="menu-item ">
+<a href="#">&nbsp;</a>
+<span><a href="https://www.sayidaty.net/جائزة-أهالينا-وسيدتي/">جائزة أهالينا</a></span>
+</li>
+<li class="menu-item ">
+<a href="#">&nbsp;</a>
+<span><a href="/SayidatyGlassHouse">بيت سيدتي الزجاجي</a></span>
+</li>
+</ul>
+<div class="socials-area">
+<div class="socials-btns">
+<a href="https://www.facebook.com/sayidatynetpage" class="social-btn facebook-btn"><i class="icomoon-icon icon-facebook"></i></a>
+<a href="https://www.youtube.com/channel/UCOSMJgnSejyeuyPAY4T6wiQ?sub_confirmation=1" class="social-btn youtube-btn"><i class="icomoon-icon icon-youtube"></i></a>
+<a href="https://twitter.com/sayidatynet" class="social-btn twitter-btn"><i class="icomoon-icon icon-twitter"></i></a>
+<a href="https://www.instagram.com/sayidatynet" class="social-btn instagram-btn"><i class="icomoon-icon icon-instagram"></i></a>
+<a href="https://www.tiktok.com/@sayidaty" class="social-btn tiktok-btn"><i class="icomoon-icon icon-tiktok"></i></a>
+<a href="https://www.snapchat.com/discover/Sayidaty/3820158893" class="social-btn snapchat-btn"><i class="icomoon-icon icon-snapchat-ghost"></i></a>
+<a target="_blank" href=" https://news.google.com/publications/CAAqJggKIiBDQklTRWdnTWFnNEtESE5oZVdsa1lYUjVMbTVsZENnQVAB?oc=3&ceid=SA:ar&hl=ar&gl=SA"><i class="icomoon-icon icon-newspaper"></i></a>
+<a class="nabd" href="https://nabd.com/sayidaty"></a>
+</div>
+</div>
+</div>
+</div>
+<script src="/themes/custom/sayidaty/assets/js/app.js?aa12ssssssssss3s"></script>
+
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-503bc5645ee85cf9" async></script>
+
+<script>
+        !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+        },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+                a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+        // Insert Twitter Pixel ID and Standard Event data below
+        twq('init','nzjx2');
+        twq('track','PageView');
+    </script>
+
+<script>
+        jQuery(document).ready(function(){
+            jQuery('#submit_tawafok').click( function() {
+                var borej_men = jQuery("#borej_men").val();
+                var borej_women = jQuery("#borej_women").val();
+
+                if (borej_men == "" || borej_women==""){
+                    jQuery(".styled-select").css("border","1px solid red");
+                }
+                else{
+                    document.location.href = "/لايف-ستايل/الأبراج/توافق-الأبراج/" + borej_men +"-"+ borej_women;
+                }
+            } );
+        });
+    </script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"754f84eaad","applicationID":"1443615376","transactionName":"MgYAMRAHC0IABUUKWwtMIwYWDwpfTiJDFkQEDz4LDQIAbSIJXxdGCg8OABA6K14FA2cKURIgDQsWFApdDQNDTgoTCgcS","queueTime":0,"applicationTime":428,"atts":"HkEDR1gdGEw=","errorBeacon":"bam.nr-data.net","agent":""}</script><script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"7217b1aa6b6f91cc","token":"4bbdc3a9e3da426f817c20f02b255809","version":"2022.6.0","si":100}' crossorigin="anonymous"></script>
+</body>
+</html>
